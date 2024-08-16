@@ -57,6 +57,9 @@ public class Server {
             request.setHttpMethod(method);
             request.setPath(path);
             request.setProtocol(protocol);
+
+            Map<String, String> queryParams = request.getQueryParams();
+
             final String key = request.getHttpMethod() + request.getPath();
 
             if (validPaths.contains(path)) {
